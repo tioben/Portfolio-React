@@ -1,26 +1,32 @@
-import {BrowserRouter as Router, Route, Routes, Link, Form} from 'react-router-dom'
-import LeftBar from './components/left-bar/Left_Bar'
+import {
+  BrowserRouter as Router,
+  Route,
+  Routes,
+  Link,
+  Form,
+} from "react-router-dom";
+import LeftBar from "./components/left-bar/Left_Bar";
+import SobreMim from "./components/main/SobreMim";
+import Projetos from "./components/main/Projetos";
+import Contato from "./components/main/Contato";
 
 function App() {
   return (
     <>
-    <Router>
-      <LeftBar />
+      <Router>
+        <LeftBar />
+        <Routes>
+          <Route exact path="/" element="" />
 
-      <Routes>
-        <Route exact path="/" element="" />
-        
-        <Route path="/item1" element={<p>item1</p>} />
+          <Route path="/SobreMim" element={<SobreMim />} />
 
-        <Route path="/item2" element={<p>item2</p>} />
+          <Route path="/Projetos" element={<Projetos />} />
 
-        <Route path="/item3" element={<p>item3</p>} />
-
-      </Routes>
-    </Router>
-
+          <Route path="/Contato" element={<Contato />} />
+        </Routes>
+      </Router>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
