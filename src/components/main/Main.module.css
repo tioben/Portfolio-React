@@ -1,9 +1,86 @@
 .Container {
   display: flex;
-  position: fixed;
-  top: 50px;
-  left: 70px;
   flex-direction: column;
   width: 100%;
-  background-color: rgb(56, 53, 53);
+  background-color: #212121;
+  padding: 30px;
+  border-radius: 1px;
+  gap: 30px;
+}
+
+.Title {
+  margin: 30px 0px 0px 50px;
+}
+
+.Projects {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.ProjectCard {
+  background-color: #0f0f0f;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 30px;
+  border-radius: 10px;
+  width: 320px;
+  height: 400px;
+  text-align: center;
+  justify-content: space-between;
+  /* border-top: 2px solid rgb(209, 15, 209); */
+}
+
+.img_desc {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.img_desc img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.descOverlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 25%;
+  background-color: rgba(39, 38, 38, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-inline-start: 5px;
+  box-sizing: border-box;
+  font-size: 0.8rem;
+}
+
+.ProjectCard h2,
+.ProjectCard p,
+.ProjectCard a {
+  margin: 0;
+  padding: 0;
+}
+
+.ProjectCard a {
+  margin-top: 10px;
+  text-decoration: none;
+  border: 2px solid rgb(209, 15, 209);
+  color: rgb(209, 15, 209);
+  border-radius: 5px;
+  padding: 15px;
+  transition: 500ms all ease-in-out;
+}
+
+.ProjectCard a:hover {
+  background-color: rgb(209, 15, 209);
+  color: #212121;
 }

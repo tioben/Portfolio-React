@@ -31,6 +31,7 @@ function LeftBar() {
             type="radio"
             name="radio"
             id="radio1"
+            checked={radio === "Sobre mim"}
             onChange={() =>
               handleChange("Sobre mim", "/SobreMim", <FaRegUser />)
             }
@@ -44,6 +45,7 @@ function LeftBar() {
             type="radio"
             name="radio"
             id="radio2"
+            checked={radio === "Projetos"}
             onChange={() =>
               handleChange("Projetos", "/Projetos", <VscGithubProject />)
             }
@@ -57,6 +59,7 @@ function LeftBar() {
             type="radio"
             name="radio"
             id="radio3"
+            checked={radio === "Contato"}
             onChange={() => handleChange("Contato", "/Contato", <FaPhone />)}
           />
           <label htmlFor="radio3">

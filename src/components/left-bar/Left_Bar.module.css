@@ -1,80 +1,80 @@
 .Nav {
-    background-color: #212121;
-    display: flex;
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 100vh;
+  background-color: #2a2a2a;
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
 }
 
-.Nav ul{
-    display: flex;
-    flex-direction: column;
-    gap: 1px;
+.Nav ul {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
 }
 
-.Nav ul li{
-    width: 50px;
-    height: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #212121;
-    font-size: 16px;
+.Nav ul li {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #2a2a2a;
+  font-size: 16px;
 }
 
-.Nav ul li:hover{
-    background-color: #0f0f0f;
+.Nav ul li:hover {
+  background-color: #0f0f0f;
 }
 
-.Nav li label{
-    height: 100%;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
+.Nav li label {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
 }
 
-.Nav li input{
-    display: none
+.Nav li input {
+  display: none;
 }
 
 .Nav li input[type="radio"]:checked + label {
-    background-color:  #0f0f0f;
-    border-left: solid 1px rgb(209, 15, 209);
+  background-color: #0f0f0f;
+  border-left: solid 5px rgb(209, 15, 209);
 }
 
-.Nav .Container_Quadradinho{
-    display: flex;
-    background-color: #212121;
-    width: 120px;
-    height: 30px;
-    position: absolute;
-    top: 0;
-    left: 50px;
-    justify-content: space-between;
-    align-items: center;
-    padding: 5px;
-    cursor: pointer;
-    border-top: solid 1px rgb(209, 15, 209);
+.Nav .Container_Quadradinho {
+  display: flex;
+  background-color: #2a2a2a;
+  width: 120px;
+  height: 30px;
+  position: absolute;
+  top: 0;
+  left: 50px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px;
+  cursor: pointer;
+  border-top: solid 2.5px rgb(209, 15, 209);
 }
 
-.Container_Quadradinho button{
-    display: block;
-    border: none;
-    cursor: pointer;
-    background-color: #212121;
-    padding: 4px 10px;
-    margin-right: 2px;
-    font-size: 12px;
+.Container_Quadradinho button {
+  display: block;
+  border: none;
+  cursor: pointer;
+  background-color: #2a2a2a;
+  padding: 4px 10px;
+  margin-right: 2px;
+  font-size: 12px;
 }
 
-.Container_Quadradinho p{
-    font-size: 12px;
+.Container_Quadradinho p {
+  font-size: 12px;
 }
 
-.Nav li svg{
-    width: 100%;
-    height: 50%;
+.Nav li svg {
+  width: 100%;
+  height: 50%;
 }
