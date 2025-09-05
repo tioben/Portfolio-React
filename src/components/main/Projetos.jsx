@@ -27,21 +27,6 @@ function Projetos() {
     {
       nome: "teste",
     },
-    {
-      nome: "teste",
-    },
-    {
-      nome: "teste",
-    },
-    {
-      nome: "teste",
-    },
-    {
-      nome: "teste",
-    },
-    {
-      nome: "teste",
-    },
   ];
 
   return (
