@@ -8,8 +8,10 @@ function Contato() {
 
   return (
     <div className={styles.Container}>
-      <h1>Contato</h1>
-      <p>Conteúdo da página Contato</p>
+      <div className={styles.Title}>
+        <h1>Contato</h1>
+        <p>Conteúdo da página Contato</p>
+      </div>
     </div>
   );
 }

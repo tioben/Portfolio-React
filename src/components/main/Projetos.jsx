@@ -71,7 +71,9 @@ function Projetos() {
                 Ver projeto
               </a>
             ) : (
-              <a href="#">Em breve</a>
+              <a href="#" className={styles.emBreve}>
+                Em breve
+              </a>
             )}
           </div>
         ))}
