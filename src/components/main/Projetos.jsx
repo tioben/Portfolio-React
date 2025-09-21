@@ -3,11 +3,6 @@ import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
 function Projetos() {
-  //variaveis
-  const [nome, setNome] = useState(null);
-  const [descrição, setDescrição] = useState("");
-  const [projectLink, setprojectLink] = useState("");
-
   const projects = [
     {
       nome: "Pokedex",

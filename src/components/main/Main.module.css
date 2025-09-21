@@ -3,18 +3,12 @@
   flex-direction: column;
   width: 100%;
   background-color: #212121;
-  padding: 0px 30px 30px 50px;
+  padding: 30px 30px 30px 80px;
   margin-top: 30px;
   border-radius: 1px;
   gap: 30px;
   align-items: center;
-}
-
-.Title {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-top: 20px;
+  text-align: center;
 }
 
 .Projects {
@@ -107,7 +101,7 @@
   height: 200px;
   overflow: hidden;
   border-radius: 100%;
-  border: solid 2px rgb(209, 15, 209);
+  border: solid 5px rgb(209, 15, 209);
 }
 
 .meContainer img {
@@ -115,4 +109,21 @@
   height: 100%;
   object-fit: cover;
   display: block;
+}
+
+.Container h1 {
+  color: rgb(209, 15, 209);
+}
+
+.Table {
+  width: 100%;
+}
+
+.Table td {
+  border: solid 1px rgb(209, 15, 209);
+  height: 50px;
+}
+
+.Table td:first-child {
+  width: 50px;
 }
