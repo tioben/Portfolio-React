@@ -1,6 +1,4 @@
 import styles from "./Main.module.css";
-import { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
 
 function Projetos() {
   const projects = [
@@ -10,17 +8,6 @@ function Projetos() {
       img: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png",
       tecnologias: "react, banco de dados",
       link: "https://www.google.com.br",
-    },
-    {
-      nome: "calculador de horas",
-      tecnologias: "api maps, react",
-      descrição:
-        "Fiz esse pojeto para me ajudar a calculas as horas a serem lançadas na gasolina",
-      img: "imagem calculador de horas",
-      link: "https://www.google.com.br",
-    },
-    {
-      nome: "teste",
     },
   ];
 

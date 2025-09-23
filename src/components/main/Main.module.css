@@ -117,13 +117,62 @@
 
 .Table {
   width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.Table tbody {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  width: 100%;
+}
+
+.Table tr {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3px;
 }
 
 .Table td {
   border: solid 1px rgb(209, 15, 209);
+  border-radius: 6px;
+  padding: 10px;
   height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.Table td:first-child {
+.Table td:nth-child(1) {
   width: 50px;
+}
+
+.Table td:nth-child(2),
+.Table td:nth-child(3) {
+  width: 200px;
+}
+
+.Table td:nth-child(3) {
+  cursor: pointer;
+}
+
+.Table caption {
+  width: 100%;
+  margin-bottom: 10px;
+  height: 25px;
+  border: solid 1px rgb(209, 15, 209);
+  border-radius: 5px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Table thead {
+  width: 100%;
+  max-width: 456px;
 }

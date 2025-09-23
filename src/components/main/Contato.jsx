@@ -1,5 +1,4 @@
 import styles from "./Main.module.css";
-import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 function Contato() {
