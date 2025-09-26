@@ -32,15 +32,15 @@ const Programações = [
 ];
 
 const Automações = [
-  { hab: "SCADA", nv: "Avançado", icon: null },
-  { hab: "Software de Controle", nv: "Avançado", icon: null },
-  { hab: "Comandos Elétricos", nv: "Avançado", icon: null },
-  { hab: "MODBUS", nv: "Avançado", icon: null },
-  { hab: "BACNET", nv: "Avançado", icon: null },
-  { hab: "HVAC", nv: "Avançado", icon: null },
-  { hab: "Hidráulica", nv: "Avançado", icon: null },
-  { hab: "Elétrica", nv: "Avançado", icon: null },
-  { hab: "Diesel", nv: "Avançado", icon: null },
+  { hab: "SCADA", nv: "Avançado" },
+  { hab: "Software de Controle", nv: "Avançado" },
+  { hab: "Comandos Elétricos", nv: "Avançado" },
+  { hab: "MODBUS", nv: "Avançado" },
+  { hab: "BACNET", nv: "Avançado" },
+  { hab: "HVAC", nv: "Avançado" },
+  { hab: "Hidráulica", nv: "Avançado" },
+  { hab: "Elétrica", nv: "Avançado" },
+  { hab: "Diesel", nv: "Avançado" },
 ];
 
 const Interesses = [
@@ -86,7 +86,7 @@ function SobreMim() {
           <thead>
             <caption>Programação</caption>
           </thead>
-          <tbody>
+          <tbody className={styles.Programacao}>
             {Programações.map((Programação, index) =>
               Programação.hab && Programação.nv ? (
                 <tr key={index}>
@@ -99,15 +99,14 @@ function SobreMim() {
           </tbody>
         </table>
 
-        <table className={styles.Table}>
+        <table className={styles.Table} id="Automacao">
           <thead>
             <caption>Automação</caption>
           </thead>
-          <tbody>
+          <tbody className={styles.Automacao}>
             {Automações.map((Automação, index) =>
               Automação.hab && Automação.nv ? (
                 <tr key={index}>
-                  <td>{Automação.icon}</td>
                   <td>{Automação.hab}</td>
                   <td>{Automação.nv}</td>
                 </tr>
@@ -120,7 +119,7 @@ function SobreMim() {
       <div className={styles.Container}>
         <h1>Interesses</h1>
         <table className={styles.Table}>
-          <tbody>
+          <tbody className={styles.Interesses}>
             {Interesses.map((Interesse, index) =>
               Interesse.item ? (
                 <tr key={index}>

@@ -176,3 +176,19 @@
   width: 100%;
   max-width: 456px;
 }
+
+.Interesses td {
+  flex: 0 0 200px;
+}
+
+:global(#Automacao) {
+  max-width: 456px;
+}
+
+.Automacao td:first-child {
+  width: 50%;
+}
+
+.Automacao td:last-child {
+  width: 50%;
+}
