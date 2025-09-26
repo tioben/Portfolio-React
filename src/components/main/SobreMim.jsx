@@ -43,7 +43,13 @@ const Automações = [
   { hab: "Diesel", nv: "Avançado", icon: null },
 ];
 
-const Interesses = [{ hab: "Leitura", nv: "Básico", icon: <FaJs size={30} /> }];
+const Interesses = [
+  { item: "Leitura" },
+  { item: "Jogos" },
+  { item: "Filmes" },
+  { item: "Séries" },
+  { item: "Animes" },
+];
 
 function SobreMim() {
   const idade = calcularIdade("2000-05-24");
@@ -116,11 +122,9 @@ function SobreMim() {
         <table className={styles.Table}>
           <tbody>
             {Interesses.map((Interesse, index) =>
-              Interesse.hab && Interesse.nv ? (
+              Interesse.item ? (
                 <tr key={index}>
-                  <td>{Interesse.icon}</td>
-                  <td>{Interesse.hab}</td>
-                  <td>{Interesse.nv}</td>
+                  <td>{Interesse.item}</td>
                 </tr>
               ) : null
             )}
