@@ -156,22 +156,6 @@
   width: 200px;
 }
 
-.Table td:nth-child(3) {
-  cursor: pointer;
-}
-
-.Table caption {
-  width: 100%;
-  margin-bottom: 10px;
-  height: 25px;
-  border: solid 1px rgb(209, 15, 209);
-  border-radius: 5px;
-  padding: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
 .Table thead {
   width: 100%;
   max-width: 456px;
@@ -190,5 +174,20 @@
 }
 
 .Automacao td:last-child {
-  width: 50%;
+  width: 50px;
+}
+
+.expandedRow td,
+.expandedRow,
+.expandedRow p {
+  flex: 0 0 100%;
+}
+
+.expandedRow td {
+  text-align: start;
+  background-color: rgb(51, 0, 26);
+}
+
+.expandedRow {
+  margin-bottom: 30px;
 }

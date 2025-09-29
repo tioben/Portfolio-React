@@ -1,58 +1,56 @@
 import styles from "./Main.module.css";
 import me from "../../assets/img/me.png";
-import {
-  FaHtml5,
-  FaCss3,
-  FaPython,
-  FaBatteryEmpty,
-  FaReact,
-  FaJs,
-} from "react-icons/fa";
-
+import { FaHtml5, FaCss3, FaPython, FaReact, FaJs } from "react-icons/fa";
 import { BiLogoPostgresql } from "react-icons/bi";
-
-function calcularIdade(dataNascimento) {
-  const hoje = new Date();
-  const nascimento = new Date(dataNascimento);
-  let idade = hoje.getFullYear() - nascimento.getFullYear();
-  const m = hoje.getMonth() - nascimento.getMonth();
-  if (m < 0 || (m === 0 && hoje.getDate() < nascimento.getDate())) {
-    idade--;
-  }
-
-  return idade;
-}
-const Programações = [
-  { hab: "HTML5", nv: "Básico", icon: <FaHtml5 size={30} /> },
-  { hab: "CSS3", nv: "Básico", icon: <FaCss3 size={30} /> },
-  { hab: "JavaScript", nv: "Básico", icon: <FaJs size={30} /> },
-  { hab: "React", nv: "Básico", icon: <FaReact size={30} /> },
-  { hab: "Python", nv: "Básico", icon: <FaPython size={30} /> },
-  { hab: "PostGreSQL", nv: "Básico", icon: <BiLogoPostgresql size={30} /> },
-];
-
-const Automações = [
-  { hab: "SCADA", nv: "Avançado" },
-  { hab: "Software de Controle", nv: "Avançado" },
-  { hab: "Comandos Elétricos", nv: "Avançado" },
-  { hab: "MODBUS", nv: "Avançado" },
-  { hab: "BACNET", nv: "Avançado" },
-  { hab: "HVAC", nv: "Avançado" },
-  { hab: "Hidráulica", nv: "Avançado" },
-  { hab: "Elétrica", nv: "Avançado" },
-  { hab: "Diesel", nv: "Avançado" },
-];
-
-const Interesses = [
-  { item: "Leitura" },
-  { item: "Jogos" },
-  { item: "Filmes" },
-  { item: "Séries" },
-  { item: "Animes" },
-];
+import React, { useState } from "react";
 
 function SobreMim() {
+  const Programações = [
+    { hab: "HTML5", nv: "Básico", icon: <FaHtml5 size={30} /> },
+    { hab: "CSS3", nv: "Básico", icon: <FaCss3 size={30} /> },
+    { hab: "JavaScript", nv: "Básico", icon: <FaJs size={30} /> },
+    { hab: "React", nv: "Básico", icon: <FaReact size={30} /> },
+    { hab: "Python", nv: "Básico", icon: <FaPython size={30} /> },
+    { hab: "PostGreSQL", nv: "Básico", icon: <BiLogoPostgresql size={30} /> },
+  ];
+
+  const Automações = [
+    { hab: "SCADA", nv: "Avançado" },
+    { hab: "Software de Controle", nv: "Avançado" },
+    { hab: "Comandos Elétricos", nv: "Avançado" },
+    { hab: "MODBUS", nv: "Avançado" },
+    { hab: "BACNET", nv: "Avançado" },
+    { hab: "HVAC", nv: "Avançado" },
+    { hab: "Hidráulica", nv: "Avançado" },
+    { hab: "Elétrica", nv: "Avançado" },
+    { hab: "Diesel", nv: "Avançado" },
+  ];
+
+  const Interesses = [
+    { item: "Leitura" },
+    { item: "Jogos" },
+    { item: "Filmes" },
+    { item: "Séries" },
+    { item: "Animes" },
+  ];
+
+  const [expandedRows, setExpandedRows] = useState([]);
   const idade = calcularIdade("2000-05-24");
+
+  function calcularIdade(dataNascimento) {
+    const hoje = new Date();
+    const nascimento = new Date(dataNascimento);
+    let idade = hoje.getFullYear() - nascimento.getFullYear();
+    const m = hoje.getMonth() - nascimento.getMonth();
+    if (m < 0 || (m === 0 && hoje.getDate() < nascimento.getDate())) {
+      idade--;
+    }
+
+    return idade;
+  }
+
+  function toggleRow(index) {}
+
   return (
     <div>
       {/* Sobre mim */}
@@ -84,7 +82,9 @@ function SobreMim() {
         <h1>Habilidades</h1>
         <table className={styles.Table}>
           <thead>
-            <caption>Programação</caption>
+            <tr>
+              <th>Programação</th>
+            </tr>
           </thead>
           <tbody className={styles.Programacao}>
             {Programações.map((Programação, index) =>
@@ -99,17 +99,30 @@ function SobreMim() {
           </tbody>
         </table>
 
+        {/* Automação */}
         <table className={styles.Table} id="Automacao">
           <thead>
-            <caption>Automação</caption>
+            <tr>
+              <th>Automação</th>
+            </tr>
           </thead>
           <tbody className={styles.Automacao}>
             {Automações.map((Automação, index) =>
               Automação.hab && Automação.nv ? (
-                <tr key={index}>
-                  <td>{Automação.hab}</td>
-                  <td>{Automação.nv}</td>
-                </tr>
+                <React.Fragment key={index}>
+                  <tr>
+                    <td>{Automação.hab}</td>
+                    <td>{Automação.nv}</td>
+                    <td>
+                      <button>\/</button>
+                    </td>
+                  </tr>
+                  <tr className={styles.expandedRow}>
+                    <td>
+                      <p>Lorem ipsum dolor</p>
+                    </td>
+                  </tr>
+                </React.Fragment>
               ) : null
             )}
           </tbody>
